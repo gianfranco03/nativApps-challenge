@@ -5,10 +5,11 @@ import {
   configureFonts,
 } from 'react-native-paper';
 
+import {MoviesState} from './src/context/Movies/MoviesState';
 import RootScreen from './src/screens/Root';
 
 import colors from './src/constants/colors';
-import { fontsConfig } from './src/constants/typography';
+import {fontsConfig} from './src/constants/typography';
 
 const theme = {
   ...DefaultTheme,
@@ -21,9 +22,11 @@ const theme = {
 
 const App = () => {
   return (
-    <PaperProvider theme={theme}>
-      <RootScreen />
-    </PaperProvider>
+    <MoviesState>
+      <PaperProvider theme={theme}>
+        <RootScreen />
+      </PaperProvider>
+    </MoviesState>
   );
 };
 
