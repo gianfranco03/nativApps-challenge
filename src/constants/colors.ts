@@ -6,6 +6,7 @@ const colors = {
   text: 'black',
   placeholder: 'gray',
   appBackground: 'white',
-}
+  white: '#FFFFFF',
+};
 
-export default colors
+export default colors;

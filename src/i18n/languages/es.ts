@@ -1,8 +1,20 @@
-import { AppTexts } from "../type"
+import {AppTexts} from '../type';
+
+const HomeText = {
+  homeTitle: 'NativApps Prueba Técnica',
+  homeSubTite1: 'Películas con título ',
+  homeSubTite2: 'del año ',
+  homeItemType: 'Tipo: ',
+  homeItemYear: 'Año: ',
+  homeErrorFetch: 'Error al obtener listado. Intente nuevamente.',
+  homeAcceptButton: 'Aceptar',
+  homeNoData: 'No se ha encontrado resultados.',
+};
 
 const es: AppTexts = {
-  homeTab: "Inicio",
-  aboutTab: "Acerca de",
-}
+  homeTab: 'Inicio',
+  aboutTab: 'Acerca de',
+  ...HomeText,
+};
 
-export default es
+export default es;
