@@ -1,14 +1,9 @@
 import React, {useEffect, useState} from 'react';
-import {
-  View,
-  ImageBackground,
-  StatusBar,
-  FlatList,
-  Image,
-  ActivityIndicator,
-} from 'react-native';
+import {View, FlatList, Image, ActivityIndicator} from 'react-native';
 import {Text, Button} from 'react-native-paper';
 import Ionicons from 'react-native-vector-icons/Ionicons';
+
+import Header from '../../components/header';
 
 import {useMovies} from '../../context/Movies/MoviesState';
 import {getMovies} from '../../context/Movies/MoviesActions';
@@ -17,8 +12,6 @@ import i18n from '../../i18n';
 
 import styles from './Home.styles';
 import colors from '../../constants/colors';
-
-const uri = 'https://images.unsplash.com/photo-1515890435782-59a5bb6ec191?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80';
 
 const HomeScren: React.FC = (): JSX.Element => {
   const [moviesState, moviesDisparch] = useMovies();
@@ -92,17 +85,12 @@ const HomeScren: React.FC = (): JSX.Element => {
 
   return (
     <View style={styles.container}>
-      <StatusBar barStyle="light-content" />
-      <ImageBackground
-        source={{
-          uri
-        }}
-        style={styles.titleImage}>
-        <Text style={styles.textTitle}>{i18n.t('homeTitle')}</Text>
-        <Text style={styles.textSubTitle}>{`${i18n.t('homeSubTite1')}${
-          params.s
-        } ${i18n.t('homeSubTite2')}${params.y}`}</Text>
-      </ImageBackground>
+      <Header
+        title={i18n.t('homeTitle')}
+        subTitle={`${i18n.t('homeSubTite1')}${params.s} ${i18n.t(
+          'homeSubTite2',
+        )}${params.y}`}
+      />
       {loading ? (
         renderLoading()
       ) : (

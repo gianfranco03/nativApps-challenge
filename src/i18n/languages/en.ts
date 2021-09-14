@@ -11,10 +11,18 @@ const HomeText = {
   homeNoData: 'No movies found.',
 };
 
+const AboutText = {
+  aboutTitle: 'Prueba Técnica Desarrollo Híbrido - NativeApps',
+  aboutUS: 'US: ',
+  aboutName: 'Name: ',
+  aboutLink: 'Repository link',
+};
+
 const en: AppTexts = {
   homeTab: 'Home',
   aboutTab: 'About',
   ...HomeText,
+  ...AboutText,
 };
 
 export default en;

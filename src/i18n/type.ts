@@ -9,4 +9,8 @@ export type AppTexts = {
   homeErrorFetch: string;
   homeAcceptButton: string;
   homeNoData: string;
+  aboutTitle: string;
+  aboutUS: string;
+  aboutName: string;
+  aboutLink: string;
 };
