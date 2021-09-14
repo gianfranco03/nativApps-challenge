@@ -31,7 +31,7 @@ const HomeScren: React.FC = (): JSX.Element => {
     getMovies(moviesDisparch, params);
   };
 
-  const renderItem = ({item}) => {
+  const renderItem = ({item}: any) => {
     return (
       <View style={styles.listItem}>
         <Image
@@ -58,6 +58,7 @@ const HomeScren: React.FC = (): JSX.Element => {
 
   const ListEmptyComponent = () => (
     <View style={styles.noDataContainer}>
+      <Text>{error ? error?.Error : 'asdlf'}</Text>
       {error ? (
         <>
           <Text>{i18n.t('homeErrorFetch')}</Text>

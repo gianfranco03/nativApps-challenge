@@ -1,7 +1,8 @@
+import {Alert} from 'react-native';
 import axios from '../../plugins/axios';
 
 import * as actionTypes from './MoviesActionsTypes';
-import { IMoviesParams } from './MoviesTypes';
+import {IMoviesParams} from './MoviesTypes';
 
 export const setLoading = (loading: boolean): any => ({
   type: actionTypes.GET_MOVIES_LOADING,
